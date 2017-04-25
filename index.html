@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<script type="text/javascript" src="js/jquery-3.1.1.min.js" ></script>
+		<script>
+	    	$(document).ready(function(){
+	    		$("#ul li").mouseover(function(){
+	    			var i=$(this).index();
+	    			$("#ul li").eq(i).css({
+	    				"background-color":"#FFFFFF",
+	    			});
+	    			$("#ul li").eq(i+1).find("div").css({			
+	    				"border-left":"1px solid rgb(244,113,22)",
+	    			});
+	    			$("#ul li").eq(i).find("span").css({
+	    				"color":"rgb(244,113,22)",
+	    			});
+	    			$("#ul li").eq(i).find("img").attr('src',imgindex(i));
+	    		});
+	    		$("#ul li").mouseout(function(){
+	    			var i=$(this).index();
+	    			$("#ul li").eq(i).find("img").attr('src',outimgindex(i));
+	    			$("#ul li").eq(i+1).find("div").css({
+	    				"border-left":"1px solid white",
+	    			});
+	    			$("#ul li").eq(i).find("span").css({
+	    				"color":"white",
+	    				
+	    			});
+	    			$("#ul li").css({
+	    				"background-color":"rgb(244,113,22)",
+	    				"padding-left":"0px",
+	    			});
+	    		})	    		
+	    	})
+	    	function imgindex(index){
+	    		switch(index){
+							case(0):
+								return "img/img49a.png";
+								break;
+							case(1):
+								return "img/img50a.png";
+								break;
+							case(2):
+								return "img/img51a.png";
+								break;
+							case(3):
+								return "img/img52a.png";
+								break;
+							case(4):
+								return "img/img53a.png";
+								break;
+							case(5):
+								return "img/img54a.png";
+								break;
+							case(6):
+								return "img/img55a.png";
+								break;
+							case(7):
+								return "img/img56a.png";
+								break;
+							case(8):
+								return "img/img57a.png";
+								break;
+							case(9):
+								return "img/img58a.png";
+								break;
+							default:
+								alert("数据异常，请重试");
+								break;
+						}
+	    	}
+	    	function outimgindex(index){
+	    		switch(index){
+							case(0):
+								return "img/img49.png";
+								break;
+							case(1):
+								return "img/img50.png";
+								break;
+							case(2):
+								return "img/img51.png";
+								break;
+							case(3):
+								return "img/img52.png";
+								break;
+							case(4):
+								return "img/img53.png";
+								break;
+							case(5):
+								return "img/img54.png";
+								break;
+							case(6):
+								return "img/img55.png";
+								break;
+							case(7):
+								return "img/img56.png";
+								break;
+							case(8):
+								return "img/img57.png";
+								break;
+							case(9):
+								return "img/img58.png";
+								break;
+							default:
+								alert("数据异常，请重试");
+								break;
+						}
+	    	}
+	    </script>
+		<style>
+		
+		</style>
+		<link rel="stylesheet"  href="css/1.css" />
+	</head>
+	<body>
+		<header>
+			<div class="tit">
+			   <img src="img/img01.jpg" alt="深圳信息职业技术学院"/>
+			    <div class="ss">
+			    	<div class="ss-1">
+			    		<ul>
+			    			<li>English</li>
+			    			<li style="border: none;">网站地图</li>
+			    		</ul>
+			    	</div>
+			    	<div class="ss-2">
+			    		<input type="text" id="tex"/>
+			    	</div>
+			    </div>
+			</div>
+		    <div class="lan">
+		    	<div class="lan_1">
+		    	 <ul>
+		    		<li>首页</li>
+		    		<li>学院概况</li>
+		    		<li>招生就业</li>
+		    		<li>组织机构</li>
+		    		<li>二级学院</li>
+		    		<li>教学管理</li>
+		    		<li>学生工作</li>
+		    		<li>科学研究</li>
+		    		<li>合作交流</li>
+		    		<li>信息服务</li>
+		    	 </ul>
+		    	</div>
+		    </div>
+		</header>
+	    <div class="new_img">	    		    	
+	    </div>
+	    <div class="xinxilan">
+	    	<div class="X_juzhon">
+	    		<ul id="ul">
+		    		<li><div><img src="img/img49.png"/><span>信息门户</span></div></li>
+		    		<li><div><img src="img/img50.png" style="height: 20px;margin-top: 10px;"/><span>电子邮件</span></div></li>
+		    		<li><div><img src="img/img51.png"/><span>网络教学</span></div></li>
+		    		<li><div><img src="img/img52.png"/><span>精品课程</span></div></li>
+		    		<li><div><img src="img/img53.png"/><span>党建在线</span></div></li>
+		    		<li><div><img src="img/img54.png"/><span>人才招聘</span></div></li>
+		    		<li><div><img src="img/img55.png"/><span>招标采购</span></div></li>
+		    		<li><div><img src="img/img56.png"/><span>书记信箱</span></div></li>
+		    		<li><div><img src="img/img57.png"/><span>校长信箱</span></div></li>
+		    		<li ><div style="border-right:1px solid white;"><img src="img/img58.png"/><span>纪检信箱</span></div></li>
+		    	 </ul>
+	    	</div>
+	    </div>
+	    <div id="news" class="news">
+	    	<div class="news_class">
+	    		<div class="news_lef">
+	    			<h3>
+	    				<a href="http://www.baidu.com" style="float: right;color: blue;font-size: 13px;font-weight: 100;color: #1377C7;">更多></a>
+	    				<p>
+	    					<span class="colorcur">校园播报</span>
+	    					 |
+	    					 <span>媒体报道</span>
+	    					 |
+	    					 <span>快速浏览</span>
+	    				</p>
+	    			</h3>
+	    		   <div class="news_lef_reportwrap">
+	    				<div class="repotwrap_top">
+	    					 <div class="container">
+					            <div class="inner clearfix">
+					                <div class="innerwraper"><img src="img/21tfjc7nxn.png" alt="" /></div>
+					                <div class="innerwraper"><img src="img/26nkvh3cf5.jpg" alt="" /></div>
+					                <div class="innerwraper"><img src="img/2o6daaxh9q.jpg" alt="" /></div>
+					                <div class="innerwraper"><img src="img/2syhpb1dro.png" alt="" /></div>
+					                <div class="innerwraper"><img src="img/21tfjc7nxn.png" alt="" /></div>
+					                <div class="innerwraper"><img src="img/26nkvh3cf5.jpg" alt="" /></div>
+					                <div class="innerwraper"><img src="img/2o6daaxh9q.jpg" alt="" /></div>
+					                <div class="innerwraper"><img src="img/2syhpb1dro.png" alt="" /></div>
+					                <div class="innerwraper"><img src="img/21tfjc7nxn.png" alt="" /></div>
+					            </div>
+					            <div class="pagination">
+					                <span class="active"></span>
+					                <span></span>
+					                <span></span>
+					                <span></span>
+					                <span></span>
+					                <span></span>
+					                <span></span>
+					                <span></span>
+					            </div>
+					        </div>
+					        <script>
+        	var innerGroup = $(".innerwraper");//获取图片class
+			var spanGroup = $(".pagination span");//获取下方圆点按钮
+			var imgWidth = $(".innerwraper img:first-child").eq(0).width();//获取图片宽度
+			var _index = 0;//s设置初始图片值
+			var timer = null;//初始事件
+			var flag = true;//事件触发BOOL
+			spanGroup.on("click", function() {
+  			  //导航切换
+ 			   _index = spanGroup.index($(this));
+ 			   selectPic(_index);
+			})
+
+			$(".container").hover(function() {
+   			 //鼠标移入
+   			 clearInterval(timer);
+   			 flag = false;
+			}, function() {
+ 			   flag = true;
+   			 timer = setInterval(go, 2000);
+			});
+
+			function autoGo(bol) {
+  			  //自动行走
+  			  if (bol) {
+     				   timer = setInterval(go, 2000);
+    				}
+			}
+			autoGo(flag);
+
+			function go() {
+  			  //计时器的函数
+   							 _index++;
+    						selectPic(_index);
+							}
+function selectPic(num) {
+    $(".pagination span").eq(num).addClass("active").siblings().removeClass("active");
+    $(".inner").animate({
+        left: -num * imgWidth,
+    }, 1000, function() {
+        //检查是否到最后一张
+        if (_index == innerGroup.length - 1) {
+            _index %= 8;
+            $(".inner").css("left", "0px");
+            $(".pagination span").eq(0).addClass("active").siblings().removeClass("active");
+        }
+    })
+}
+        </script>
+	    					<div class="container_right">
+	    						<h3><a href="#">我校入选教育部工业机器人领域职业教育项目合作院校</a></h3>
+	    						<span>时间：2017-02-28</span>
+	    						<p>2月17日，教育部职业教育与成人教育司发布《关于公布华航唯实、ABB、新时达工业机器人领域职业教育项目合作院校名单的通知》...</p>
+	    						<a>查看详情</a>
+	    					</div>
+	    				</div>
+	    				<div class="repotwrap_bottom">
+	    					<ul>
+	    						<li>&middot;<a href="http://www.baidu.com" >我校入选广东省首批一流高职院校建设计划</a></li>
+	    						<li>&middot;<a href="http://www.baidu.com" >交环学子获全国水利高职院校技能大赛一等奖</a></li>
+	    						<li>&middot;<a href="http://www.baidu.com" >我校作品获省大学生心理健康教育与咨询技能大赛一等奖</a></li>
+	    						<li style="border: none;">&middot;<a href="http://www.baidu.com" >我校获市第二届职工全健排舞比赛二等将</a></li>
+	    					</ul>
+	    				</div>
+	    			</div>
+	    		</div>
+	    		<div class="news_right">
+	    			<div class="zong">
+						<h3><span>通知公告</span><a href="http://www.baidu.com" style="float: right; font-size: 12px; color: #1377C7;">更多></a></h3>
+						<div id="div1"style="height: 146px; padding: 15px 0; ">
+							<div id="time_title" class="time_title" style="border: none; height: 77px;padding: 0px;">
+								<div class="time" style="width: 62px;border: 1px solid #f47115; height: 59px;">
+									<span>11/22</span>
+									<p>2016</p>
+								</div>
+								<h4 style=" font-weight: normal;border-bottom: 1px dashed #f47115; font-size: 15px; padding: 2px;	padding-top:0px;float: left;color:#f47115 ;"> 
+									关于组织参加 "2016创业指导校...</h4>
+							</div>
+						    <p id="hua_id" style="font-size: 13px; margin-top: 15px;">随着大众创业、万众创新的全面推进，依据“实施更加积极地就业政策，优化创业就业环境，以创新引领就业，以创业带动…</p>
+						    <div id="time_tiele_1" style="padding: 2px 0; border: none; display: none;">
+						    	<a style="font-size: 16px; ">关于组织参加“2016创业指导</a>
+						    	<a style="float: right; font-size: 13px; padding-top: 3px;">2016.11.22</a>
+						    </div>
+						</div>
+						<div id="div2">
+							<div id="time_title2" class="time_title" style="border: none; height: 77px;padding: 0px; display: none;">
+								<div class="time" style="width: 62px;border: 1px solid #f47115; height: 59px;">
+									<span>11/22</span>
+									<p>2016</p>
+								</div>
+								<h4 style=" font-weight: normal;border-bottom: 1px dashed #f47115; font-size: 15px; padding: 2px;	padding-top:0px;float: left;color:#f47115 ;"> 
+									关于组织参加 "2016创业指导校...</h4>
+							</div>
+						    <p id="hua_id2" style="font-size: 13px;display: none; margin-top: 15px;">随着大众创业、万众创新的全面推进，依据“实施更加积极地就业政策，优化创业就业环境，以创新引领就业，以创业带动…</p>
+						    <div id="time_tiele_2" style="padding: 2px 0; border: none; ">
+						    	<a style="font-size: 16px; ">关于组织参加“2016创业指导</a>
+						    	<a style="float: right; font-size: 13px; padding-top: 3px;">2016.11.22</a>
+						    </div>
+						</div>
+						<div id="div3">
+							<div id="time_title3" class="time_title" style="border: none; height: 77px;padding: 0px;display: none;">
+								<div class="time" style="width: 62px;border: 1px solid #f47115; height: 59px;">
+									<span>11/22</span>
+									<p>2016</p>
+								</div>
+								<h4 style=" font-weight: normal;border-bottom: 1px dashed #f47115; font-size: 15px; padding: 2px;	padding-top:0px;float: left;color:#f47115 ;"> 
+									关于组织参加 "2016创业指导校...</h4>
+							</div>
+						    <p id="hua_id3" style="font-size: 13px;display: none; margin-top: 15px;">随着大众创业、万众创新的全面推进，依据“实施更加积极地就业政策，优化创业就业环境，以创新引领就业，以创业带动…</p>
+						    <div id="time_tiele_3" style="padding: 2px 0; border: none; ">
+						    	<a style="font-size: 16px; ">关于组织参加“2016创业指导</a>
+						    	<a style="float: right; font-size: 13px; padding-top: 3px;">2016.11.22</a>
+						    </div></div>
+						<div id="div4">
+							<div id="time_title4" class="time_title" style="border: none; height: 77px;padding: 0px;display: none;">
+								<div class="time" style="width: 62px;border: 1px solid #f47115; height: 59px;">
+									<span>11/22</span>
+									<p>2016</p>
+								</div>
+								<h4 style=" font-weight: normal;border-bottom: 1px dashed #f47115; font-size: 15px; padding: 2px;	padding-top:0px;float: left;color:#f47115 ;"> 
+									关于组织参加 "2016创业指导校...</h4>
+							</div>
+						    <p id="hua_id4" style="font-size: 13px; margin-top: 15px;display: none;">随着大众创业、万众创新的全面推进，依据“实施更加积极地就业政策，优化创业就业环境，以创新引领就业，以创业带动…</p>
+						    <div id="time_tiele_4" style="padding: 2px 0; border: none; ">
+						    	<a style="font-size: 16px; ">关于组织参加“2016创业指导</a>
+						    	<a style="float: right; font-size: 13px; padding-top: 3px;">2016.11.22</a>
+						    </div>
+						</div>
+						<div id="div5">
+							<div id="time_title5" class="time_title" style="border: none; height: 77px;padding: 0px;display: none;">
+								<div class="time" style="width: 62px;border: 1px solid #f47115; height: 59px;">
+									<span>11/22</span>
+									<p>2016</p>
+								</div>
+								<h4 style=" font-weight: normal;border-bottom: 1px dashed #f47115; font-size: 15px; padding: 2px;	padding-top:0px;float: left;color:#f47115 ;"> 
+									关于组织参加 "2016创业指导校...</h4>
+							</div>
+						    <p id="hua_id5" style="font-size: 13px; margin-top: 15px;display: none;">随着大众创业、万众创新的全面推进，依据“实施更加积极地就业政策，优化创业就业环境，以创新引领就业，以创业带动…</p>
+						    <div id="time_tiele_5" style="padding: 2px 0; border: none; ">
+						    	<a style="font-size: 16px; ">关于组织参加“2016创业指导</a>
+						    	<a style="float: right; font-size: 13px; padding-top: 3px;">2016.11.22</a>
+						    </div>
+						</div>
+						<div id="div6">
+							<div id="time_title6" class="time_title" style="border: none; height: 77px;padding: 0px;display: none;">
+								<div class="time" style="width: 62px;border: 1px solid #f47115; height: 59px;">
+									<span>11/22</span>
+									<p>2016</p>
+								</div>
+								<h4 style=" font-weight: normal;border-bottom: 1px dashed #f47115; font-size: 15px; padding: 2px;	padding-top:0px;float: left;color:#f47115 ;"> 
+									关于组织参加 "2016创业指导校...</h4>
+							</div>
+						    <p id="hua_id6" style="font-size: 13px; margin-top: 15px;display: none;">随着大众创业、万众创新的全面推进，依据“实施更加积极地就业政策，优化创业就业环境，以创新引领就业，以创业带动…</p>
+						    <div id="time_tiele_6" style="padding: 2px 0; border: none; ">
+						    	<a style="font-size: 16px; ">关于组织参加“2016创业指导</a>
+						    	<a style="float: right; font-size: 13px; padding-top: 3px;">2016.11.22</a>
+						    </div>
+						</div>
+					</div>
+					<script>
+						window.onload =function()
+						{
+							var a=document.getElementById("div1");
+							var b=document.getElementById("div2");
+							var c=document.getElementById("div3");
+							var d=document.getElementById("div4");
+							var e=document.getElementById("div5");
+							var f=document.getElementById("div6");
+							b.onmouseover=function()
+							{
+								document.getElementById("time_title").style.display="none";
+								document.getElementById("hua_id").style.display="none";
+								document.getElementById("time_tiele_1").style.display="inline";
+								document.getElementById("time_title2").style.display="inline-block";
+								document.getElementById("hua_id2").style.display="inline-block";
+								document.getElementById("time_tiele_2").style.display="none";
+								a.style.height="19px";
+								a.style.padding="8px 0";
+								b.style.padding="15px 0";
+								b.style.height="146px";
+							}
+							b.onmouseout=function()
+							{
+								document.getElementById("time_title").style.display="inline-block";
+								document.getElementById("hua_id").style.display="inline-block";
+								document.getElementById("time_tiele_1").style.display="none";
+								document.getElementById("time_title2").style.display="none";
+								document.getElementById("hua_id2").style.display="none";
+								document.getElementById("time_tiele_2").style.display="inline-block";
+								b.style.padding="8px 0";
+								a.style.padding="15px 0";
+								a.style.height="146px";
+								b.style.height="19px";
+							}
+							c.onmouseover=function()
+							{
+								document.getElementById("time_title").style.display="none";
+								document.getElementById("hua_id").style.display="none";
+								document.getElementById("time_tiele_1").style.display="inline";
+								document.getElementById("time_title3").style.display="inline-block";
+								document.getElementById("hua_id3").style.display="inline-block";
+								document.getElementById("time_tiele_3").style.display="none";
+								a.style.padding="8px 0";
+								c.style.padding="15px 0";
+								a.style.height="19px";
+								c.style.height="146px";
+							}
+							c.onmouseout=function()
+							{
+								document.getElementById("time_title").style.display="inline-block";
+								document.getElementById("hua_id").style.display="inline-block";
+								document.getElementById("time_tiele_1").style.display="none";
+								document.getElementById("time_title3").style.display="none";
+								document.getElementById("hua_id3").style.display="none";
+								document.getElementById("time_tiele_3").style.display="inline-block";
+								c.style.padding="8px 0";
+								a.style.padding="15px 0";
+								a.style.height="146px";
+								c.style.height="19px";
+							}
+							d.onmouseover=function()
+							{
+								document.getElementById("time_title").style.display="none";
+								document.getElementById("hua_id").style.display="none";
+								document.getElementById("time_tiele_1").style.display="inline";
+								document.getElementById("time_title4").style.display="inline-block";
+								document.getElementById("hua_id4").style.display="inline-block";
+								document.getElementById("time_tiele_4").style.display="none";
+								a.style.padding="8px 0";
+								d.style.padding="15px 0";
+								a.style.height="19px";
+								d.style.height="146px";
+							}
+							d.onmouseout=function()
+							{
+								document.getElementById("time_title").style.display="inline-block";
+								document.getElementById("hua_id").style.display="inline-block";
+								document.getElementById("time_tiele_1").style.display="none";
+								document.getElementById("time_title4").style.display="none";
+								document.getElementById("hua_id4").style.display="none";
+								document.getElementById("time_tiele_4").style.display="inline-block";
+								d.style.padding="8px 0";
+								a.style.padding="15px 0";
+								a.style.height="146px";
+								d.style.height="19px";
+							}
+							e.onmouseover=function()
+							{
+								document.getElementById("time_title").style.display="none";
+								document.getElementById("hua_id").style.display="none";
+								document.getElementById("time_tiele_1").style.display="inline";
+								document.getElementById("time_title5").style.display="inline-block";
+								document.getElementById("hua_id5").style.display="inline-block";
+								document.getElementById("time_tiele_5").style.display="none";
+								a.style.padding="8px 0";
+								e.style.padding="15px 0";
+								a.style.height="19px";
+								e.style.height="146px";
+							}
+							e.onmouseout=function()
+							{
+								document.getElementById("time_title").style.display="inline-block";
+								document.getElementById("hua_id").style.display="inline-block";
+								document.getElementById("time_tiele_1").style.display="none";
+								document.getElementById("time_title5").style.display="none";
+								document.getElementById("hua_id5").style.display="none";
+								document.getElementById("time_tiele_5").style.display="inline-block";
+								e.style.padding="8px 0";
+								a.style.padding="15px 0";
+								a.style.height="146px";
+								e.style.height="19px";
+							}
+							f.onmouseover=function()
+							{
+								document.getElementById("time_title").style.display="none";
+								document.getElementById("hua_id").style.display="none";
+								document.getElementById("time_tiele_1").style.display="inline";
+								document.getElementById("time_title6").style.display="inline-block";
+								document.getElementById("hua_id6").style.display="inline-block";
+								document.getElementById("time_tiele_6").style.display="none";
+								a.style.padding="8px 0";
+								f.style.padding="15px 0";
+								a.style.height="19px";
+								f.style.height="146px";
+							}
+							f.onmouseout=function()
+							{
+								document.getElementById("time_title").style.display="inline-block";
+								document.getElementById("hua_id").style.display="inline-block";
+								document.getElementById("time_tiele_1").style.display="none";
+								document.getElementById("time_title6").style.display="none";
+								document.getElementById("hua_id6").style.display="none";
+								document.getElementById("time_tiele_6").style.display="inline-block";
+								f.style.padding="8px 0";
+								a.style.padding="15px 0";
+								a.style.height="146px";
+								f.style.height="19px";
+							}
+						}
+					</script>
+	    		</div>
+	    	</div>
+	    </div>
+	    <div class="levents">
+	    	<div class="clearfix">
+	    		<h3 class="clearfix_title">
+	    			专题活动
+	    			<a href="#">更多></a>
+	    		</h3>
+	    		<div class="clearfix_left">
+	    			<h3>活动</h3>
+	    			<div class="clearfix_left_container">
+	    				<div>
+	    					<div class="container_div">
+	    						<a><img src="img/img_container1.jpg"/></a>
+	    						<h3><a>2016级迎新晚会</a></h3>
+	    						<p>时间：10月17日（星期一） 19:00</p>
+	    						<p>地点：深圳信息职业技术学院体育馆(羽毛球主场馆)</p>
+	    					</div>
+	    				</div>
+	    				<div>
+	    					<div class="container_div">
+	    						<a><img src="img/img_container2.jpg"/></a>
+	    						<h3><a>原创古装话剧《武侠没有侠》</a></h3>
+	    						<p>时间：2016年6月2日（周四）晚6:30 — 7:00日</p>
+	    						<p>地点：会议中心·千人礼堂</p>
+	    					</div>
+	    				</div>
+	    				<div>
+	    					<div class="container_div">
+	    						<a><img src="img/img_container3.jpg"/></a>
+	    						<h3><a>“风雅颂“原创诗经音乐会</a></h3>
+	    						<p>时间：2016年5月31日（星期二）19：00</p>
+	    						<p>地点：大礼堂</p>
+	    					</div>
+	    				</div>
+	    			</div>
+	    		</div>
+	    		<div class="clearfix_right clearfix_right_1">
+	    			<h3>活动</h3>
+	    			<div class="clearfix_right_container">
+	    				<a href="#"><img src="img/img_container5.jpg"/></a>
+	    				<a class="container_title">产学研项目—大数据背景下的数据建模</a>
+	    				<p>时间：</p>
+	    				<p>地点：</p>
+	    			</div>
+	    		</div>
+	    		<div class="clearfix_right clearfix_right_2">
+	    			<h3>活动</h3>
+	    			<div class="clearfix_right_container">
+	    				<a href="#"><img src="img/img_container4.jpg"/></a>
+	    				<a class="container_title">产学研项目—大数据背景下的数据建模</a>
+	    				<p>时间：</p>
+	    				<p>地点：</p>
+	    			</div>
+	    		</div>
+	    	</div>
+	    </div>
+		<footer>
+			<div class="footer_link">
+				<div class="webfix">
+					<div class="webfix_left">
+						<h4><strong>快捷通道</strong></h4>
+						<ul>
+							<li>
+								<p><a class="font_w">招生就业</a></p>
+								<p><a>就业在线</a></p>
+								<p><a>招生信息</a></p>
+							</li>
+							<li>
+								<p><a class="font_w">教学管理</a></p>
+								<p><a>教务管理系统</a></p>
+								<p><a>教务处</a></p>
+								<p><a>实践教学管理系统</a></p>
+								<p><a>继续教育</a></p>
+								<p><a>教学督导室</a></p>
+								<p><a>新生学籍查询</a></p>
+							</li>
+							<li>
+								<p><a class="font_w">学生工作</a></p>
+								<p><a>学生处</a></p>
+								<p><a>在线心理咨询</a></p>
+								<p><a>学生评测</a></p>
+								<p><a>学院论坛</a></p>
+							</li>
+							<li>
+								<p><a class="font_w">合作交流</a></p>
+								<p><a>国际交流与合作</a></p>
+								<p><a>国内交流与合作</a></p>
+								<p><a>英国兰开夏EDA</a></p>
+							</li>
+							<li>
+								<p><a class="font_w">信息服务</a></p>
+								<p><a>电子邮件</a></p>
+								<p><a>网络教学</a></p>
+								<p><a>精品课程</a></p>
+								<p><a>视觉识别系统</a></p>
+								<p><a>信息系统列表</a></p>
+							</li>
+						</ul>
+					</div>
+					<div class="webfix_right">
+						<a class="focuscor"><span>信息公开</span></a>
+						<a><span>十三五建设专栏</span></a>
+						<a><span>骨干校验收专栏</span></a>
+						<a><span>质量工程</span></a>
+						<a><span>国家资源建设</span></a>
+						<a class="orange"><span>广东省一流校申报</span></a>
+						<a><span>人才数据采集平台</span></a>
+						<a><span>广东省第八届教学名师评选专栏</span></a>
+						<a><span>省专业教学资源库申报</span></a>
+						<a><span>省高职教育重点专业验收</span></a>
+						<a><span>第二批省品牌专业验收</span></a>
+						<a><span>省公共实训中心申报</span></a>
+					</div>
+				</div>
+			</div>
+			<div class="footer_warp">
+				<div class="warp">
+					<div class="warp-left">
+						<p>地址：深圳市龙岗区龙翔大道2188号 邮编：518172</p>
+						<p>传真：0755-89226555</p>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</body>
+</html>
